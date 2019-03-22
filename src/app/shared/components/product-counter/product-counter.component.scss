@@ -1,0 +1,47 @@
+.container {
+    top: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 400;
+    max-width: 100%;
+    min-width: 6em;
+    .widget {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
+            justify-content: start;
+        }
+        .quantity {
+            display: flex;
+            justify-content: center;
+            width: 3em;
+            align-content: center;
+            background-color: #80808033;
+            margin-right: 0.1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .counter {
+            display: flex;
+            height: 100%;
+            flex-flow: column;
+            width: 1.5em;
+            .plus {
+                background-color: #80808063;
+                display: flex;
+                justify-content: center;
+            }
+            .minus {
+                background-color: #80808063;
+                display: flex;
+                justify-content: center;
+                /* align-items: center; */
+                /* height: 49%; */
+                margin-top: 4%;
+            }
+        }
+    }
+}

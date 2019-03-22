@@ -1,0 +1,28 @@
+<br>
+<div class="container">
+
+  <div class="row header">
+    HOME / PLATES / &nbsp; <span> {{product?.title |uppercase}} </span>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <div [style.background-image]="'url('+'assets/img/'+product.image+')'" class="view hm-zoom  image"
+        style="min-width:200px;min-height:200px;background-color:black;" style="cursor: pointer">
+      </div>
+    </div>
+    <div class="details col-sm-4">
+      <div class="productBrand">{{product?.brand}}</div>
+      <div class="productTitle">{{product?.title}}</div>
+      <div class="productPrice">${{product?.price}}</div>
+      <div class="productDescription">{{product?.description}}</div>
+      <hr style="width:100%">
+      <div class="buttonPanel">
+        <div class="quantity">
+          <product-counter [quantity]="quantity" (quantityChange)="quantityChange ($event)"></product-counter>
+        </div>
+        <div class="addToCart" (click)="addToCart(product)">
+          <button>ADD TO CART </button>
+        </div>
+      </div>
+    </div>
+  </div>

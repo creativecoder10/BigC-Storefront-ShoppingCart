@@ -1,0 +1,121 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/0.a11be28a2c5b3b2ab424.js",
+        "/1.bbbcfed20a1b42d8a282.js",
+        "/2.f6cef2cbfa6cc7851ae0.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.16e3569291a8eb88c35c.js",
+        "/polyfills.558e7ac4a7674a70b3d8.js",
+        "/runtime.985191722eed5d5f7de2.js",
+        "/scripts.b9c69d17e4417e0078be.js",
+        "/styles.f72aba7af0a684230590.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/banner_img/adidas.jpg",
+        "/assets/banner_img/img_1.jpg",
+        "/assets/banner_img/img_2.jpg",
+        "/assets/banner_img/img_3.jpg",
+        "/assets/banner_img/img_3.png",
+        "/assets/banner_img/img_4.jpg",
+        "/assets/i18n/en.json",
+        "/assets/i18n/fa.json",
+        "/assets/i18n/fr.json",
+        "/assets/i18n/hin.json",
+        "/assets/i18n/ja.json",
+        "/assets/img/MOCK_DATA_SHOES.json",
+        "/assets/img/Ripcurl Black.jpg",
+        "/assets/img/Ripcurl Blue.jpg",
+        "/assets/img/blue-stripe-stoneware-plate.jpg",
+        "/assets/img/hand-painted-blue-flat-dish.jpg",
+        "/assets/img/heme.jpg",
+        "/assets/img/loader.svg",
+        "/assets/img/logo.png",
+        "/assets/img/malecostume-512.png",
+        "/assets/img/mashiko-yaki-green-small-plate.jpg",
+        "/assets/img/mashiko-yaki-indigo-small-plate.jpg",
+        "/assets/img/mashiko-yaki-saucer.jpg",
+        "/assets/img/plates-header.jpg",
+        "/assets/manifest.json",
+        "/assets/products.json",
+        "/assets/settings.json",
+        "/assets/theme/colors.scss",
+        "/assets/theme/functions.scss"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/0.a11be28a2c5b3b2ab424.js": "8c03b3e23fb499c0b37c8aff0eadd7d34c5676f9",
+    "/1.bbbcfed20a1b42d8a282.js": "c353b865adb889e1182909f5c74c1814414ba7a6",
+    "/2.f6cef2cbfa6cc7851ae0.js": "6041efc6cbe6fb8f6f8eb185352b6a9b3d0e306b",
+    "/assets/banner_img/adidas.jpg": "436fa5124f16d75d6627daeda3b023a4d173ad20",
+    "/assets/banner_img/img_1.jpg": "71f530be5c00678238b58b5561ef83937b113452",
+    "/assets/banner_img/img_2.jpg": "b27ca37a165e24133c6641db058c9954ba80d97a",
+    "/assets/banner_img/img_3.jpg": "66b36a54531906d84ed0443785134b269187189c",
+    "/assets/banner_img/img_3.png": "a8d46f4024cfb1995f59a48f8cf428e17e8fbaed",
+    "/assets/banner_img/img_4.jpg": "75be1f90d35e318ad4652919d40e8df7f7365cd8",
+    "/assets/i18n/en.json": "f032ef1376815888cf396571bf86c3055ffa491b",
+    "/assets/i18n/fa.json": "0853ceacc4a3fe872cb5bcf9a9cc3ffd24e0270b",
+    "/assets/i18n/fr.json": "b5adb55c60f03257a1fe237cd8ceb923aede904f",
+    "/assets/i18n/hin.json": "c9ef65e9cfa62d5e691baa9d5a5a7f1076320942",
+    "/assets/i18n/ja.json": "5922d6aaf97d0491560d74138a72626fe035326c",
+    "/assets/img/MOCK_DATA_SHOES.json": "5a162462c4e104586fc8ec544b80f20ca4014aa9",
+    "/assets/img/Ripcurl Black.jpg": "b0a45bd10353bd32bfa0f745fd44a12909bc23e7",
+    "/assets/img/Ripcurl Blue.jpg": "ec0e8cf64272fb44b9197a9da21fd44997171986",
+    "/assets/img/blue-stripe-stoneware-plate.jpg": "97a6ac560080135e4b0441c88471e5a282829e2d",
+    "/assets/img/hand-painted-blue-flat-dish.jpg": "899e16ea7143105307ee8e71c8e4a5ce23de7c28",
+    "/assets/img/heme.jpg": "3cdf6ec007426c183935a4837ade154dc7fcab54",
+    "/assets/img/loader.svg": "633f96a11e3b0edc8dd657708d7c06258c97e4ee",
+    "/assets/img/logo.png": "f7a2319e12b7ad3f91e424b00ceb208246dfa348",
+    "/assets/img/malecostume-512.png": "745d60b04eb7ae6c26b9a50fff7811308cd8e9be",
+    "/assets/img/mashiko-yaki-green-small-plate.jpg": "18a8adebb95bb99a97771b14fe852828f40aa81b",
+    "/assets/img/mashiko-yaki-indigo-small-plate.jpg": "c5cc6015dfdb87f70a5030a0eb7d2c21d11bd82c",
+    "/assets/img/mashiko-yaki-saucer.jpg": "330148d4ff6a60231c346d0c29f813a1e65d950d",
+    "/assets/img/plates-header.jpg": "664598e1fc1d60f20d5ed042ee4301c05158d516",
+    "/assets/manifest.json": "bcd5933dd997bf95d1add972cef2ac7af3d3a1a6",
+    "/assets/products.json": "60fa0b99627027f451038c8b4fac8681e97d195c",
+    "/assets/settings.json": "0779cd414f16be98479387edab48a9dab954d17e",
+    "/assets/theme/colors.scss": "0928d761ea4de357c22d35eba237747cba5cc4f9",
+    "/assets/theme/functions.scss": "55d4737d16e80ab778ce97b09bcf279bf086ee48",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/index.html": "9876482967d90304b4ad509022cae46713eeea55",
+    "/main.16e3569291a8eb88c35c.js": "a5b84c49cc4d5e24680aeb20a873fad2e2659ab8",
+    "/polyfills.558e7ac4a7674a70b3d8.js": "0c94131eeca341750925e653a60c060d8964ac90",
+    "/runtime.985191722eed5d5f7de2.js": "9b6d2541c2fc72fd6ec51ebbdbfe6f4f221d7966",
+    "/scripts.b9c69d17e4417e0078be.js": "25b69e27ce32c9c89155e8faf37991e4b664acc5",
+    "/styles.f72aba7af0a684230590.css": "b6e42247875863075bb45381fbfc1132bfce6bf7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

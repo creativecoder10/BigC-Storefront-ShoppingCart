@@ -1,0 +1,9 @@
+<div class="container" style="top:0em">
+  <!-- app-navbar contains the main links to traverse the app to product list, to shopping card and other links  -->
+  <app-navbar></app-navbar>
+  <!-- The router-outlet in the main tag so that animations could be implemented based on routing  -->
+  <main [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+
+</div>

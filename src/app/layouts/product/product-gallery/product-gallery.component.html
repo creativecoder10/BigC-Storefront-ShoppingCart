@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card-box ">
+    <div  class="card-deck ">
+      <div *ngFor="let product of model"  class="card">
+        <div [style.background-image]="'url('+'assets/img/'+product.image+')'" class="image-holder hovereffect">
+          
+          <div class="overlay">
+              <a class="info" [routerLink]="['/products/product', product.title]" [id]="'details-'+product.title" href="#">VIEW DETAILS </a>
+              <a class="info grey-background" [id]="product.title" [name]="product.title" (click)="addToCart(product)" href="#">ADD TO CART</a>
+           </div>
+        </div>
+       
+        <div class="card-footer">
+          <small class="text-muted">{{product?.brand}}</small>
+          <p class="text-uppercase" >{{product?.title}}</p>
+          <small class="text-muted">{{product?.price |number : '1.2-2'| currency:'USD'}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

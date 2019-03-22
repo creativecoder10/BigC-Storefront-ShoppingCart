@@ -1,0 +1,14 @@
+
+
+.red-theme {
+    --navBackground:#001e41;
+    --productTitle: #001e41;
+    font-family: "Archer SSm A","Archer SSm B","Open Sans","Helvetica","Arial",serif;
+}
+
+
+
+$variables: (
+    --navBackground: var(--navBackground),
+    --productTitle: var(--productTitle)
+);

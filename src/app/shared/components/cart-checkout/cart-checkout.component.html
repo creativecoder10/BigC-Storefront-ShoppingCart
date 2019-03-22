@@ -1,0 +1,145 @@
+<!-- DESKTOP AND SMALL SCREEN / IPAD / TAB VIEW -->
+<div *ngIf="items.length >0" class="container-screen">
+
+	<!-- Table of items purchased  -->
+	<table style="width:90%">
+		<thead>
+			<tr>
+				<!-- <th *ngFor="let head of items[0] | keys">{{head}}</th> -->
+				<th style="width:52%">product</th>
+				<th style="width:16%;text-align:center" class="center">Quantity</th>
+				<th style="width:16%;text-align:center" class="center">Total</th>
+				<th style="width:16%;text-align:end">Action</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr *ngFor="let product of items">
+				<td>
+					<div class="productRow" style="width:100%">
+						<div class="productImage" [style.background-image]="'url('+'assets/img/'+product.image+')'">
+						</div>
+						<div class="productDetails">
+							<div class="productBrand">{{product.brand}}</div>
+							<div class="productTitleRow">
+								<div class="productTitle"> {{product.title}} x {{product.quantity}} </div>
+							</div>
+						</div>
+					</div>
+				</td>
+
+				<td style="text-align:center">
+					<product-counter [(quantity)]="product.quantity" (quantityChange)="quantityChange ($event,product)">
+					</product-counter>
+				</td>
+
+				<td class="center" style="text-align:center">
+					<div class="productPrice header"> ${{product.totalPrice|number : '1.2-2'| currency:'USD'}}</div>
+				</td>
+
+				<td style="text-align:end">
+					<div (click)="removeProduct(product) " class="material-icons">close</div>
+				</td>
+
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+
+
+<!-- MOBILE VIEW SEPARATED ------------------------- -->
+
+<div *ngIf="items.length >0" class="container-mobile">
+	<div *ngFor="let product of items" class="productContainer">
+		<div class="productImage" [style.background-image]="'url('+'assets/img/'+product.image+')'">
+
+		</div>
+		<div class="details">
+			<div class="label">
+				Product
+			</div>
+			<div class="text">
+				{{product.title}} x {{product.quantity}}
+			</div>
+		</div>
+		<div class="details">
+			<div class="label">
+				Quantity
+			</div>
+			<div class="text">
+				<product-counter [(quantity)]="product.quantity" (quantityChange)="quantityChange ($event,product)">
+				</product-counter>
+			</div>
+		</div>
+		<div class="details">
+			<div class="label">
+				Price
+			</div>
+			<div class="text">
+				{{product.totalPrice|number : '1.2-2'| currency:'USD'}}
+			</div>
+		</div>
+		<div class="details">
+			<div class="label">
+				Description
+			</div>
+			<div class="text">
+				{{product.description}}
+			</div>
+		</div>
+		<div style="width:100%;height:2em">
+		</div>
+
+	</div>
+</div>
+
+	<!-- Total price section  -->
+
+	<section *ngIf="items.length >0" class="section-screen">
+
+			<hr style="width:90%">
+			<div class="totalBox">
+				<div class="details">
+					<div class="cartOverview">
+						CART OVERVIEW
+					</div>
+					<div class="field">
+						<div class="label">
+							SUBTOTAL
+						</div>
+						<div class="text">
+							{{productService.total |number : '1.2-2'| currency:'USD'}}
+						</div>
+					</div>
+					<div class="field">
+						<div class="label">
+							TOTAL
+						</div>
+						<div class="text black-text">
+							{{productService.total|number : '1.2-2'| currency:'USD'}}
+						</div>
+					</div>
+				</div>
+		
+			</div>
+		
+			<hr style="width:90%">
+		
+			<!-- Checkout buttons -->
+		
+			<div class="checkout">
+				<div class="continueShopping">
+					CONTINUE SHOPPING
+				</div>
+		
+				<div class ="button">
+					<button> CHECKOUT ($ {{productService.total|number : '1.2-2'| currency:'USD'}})</button>
+				</div>
+			</div>
+	</section>
+
+
+<div *ngIf="items.length===0" style="display:flex;justify-content: center;align-items: center">
+	NO ITEMS IN CART
+</div>

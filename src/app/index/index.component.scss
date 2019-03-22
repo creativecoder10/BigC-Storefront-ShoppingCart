@@ -1,0 +1,47 @@
+.w-100 {
+    margin: auto;
+}
+
+.view {
+    width: 100% !important;
+    img {
+        width: 80% !important;
+        height: 80% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:576px) {
+    .carousel-caption {
+        .h3-responsive {
+            font-size: 100% !important;
+            margin-bottom: 0px !important;
+        }
+        p {
+            padding-bottom: 0.5em;
+            margin-bottom: 0em !important;
+        }
+    }
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-caption {
+    bottom: 0.5em !important;
+    width: 70%;
+}
+
+.new-background {
+    background-color: rgba(3, 4, 25, 0.24);
+}

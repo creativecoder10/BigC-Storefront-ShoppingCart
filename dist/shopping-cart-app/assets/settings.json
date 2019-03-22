@@ -1,0 +1,47 @@
+[
+    {
+        "env": "dev",
+        "debug": true,
+        "unlicensed": false,
+        "app": {
+            "logo": {
+                "type": "img",
+                "src": "assets/img/logo.svg"
+            },
+            "copyright": "Copyright 2019 DeepeshDang.com",
+
+
+            "menu": {
+                "list": [
+                    {
+                        "id": "home",
+                        "name": "HOME",
+                        "items": []
+                    },
+                    {
+                        "id": "Shop",
+                        "name": "SHOP",
+                        "items": [],
+                        "dropdown": true
+                    },
+                    {
+                        "id": "Journal",
+                        "name": "JOURNAL",
+                        "items": []
+                    },
+                    {
+                        "id": "More",
+                        "name": "MORE",
+                        "items": [],
+                        "dropdown": true
+                    }
+                ]
+            },
+            "new":true
+            
+        },
+
+
+        "mock": false
+    }
+]

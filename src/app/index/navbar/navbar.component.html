@@ -1,0 +1,95 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color:#ffffff !important">
+
+  <!-- Navbar brand -->
+  <div class="logo">
+    <a class="navbar-brand" id="logo" [routerLink]="[ '/' ]">
+      <img src="assets/img/logo.png">
+    </a>
+  </div>
+
+  <!-- Collapse button for mobile view  -->
+
+  <button class="navbar-toggler" type="button" [routerLink]="['/products/cart-items']" data-target="#basicExampleNav"
+  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="material-icons" style="font-size:1.5em;display: flex;  justify-content: center;
+  align-items: center;padding-top:0">shopping_cart <span style="font-size:0.7em"> ({{productService.navbarCartCount}})</span></div>
+</button>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div  #nav class="navbar-flex collapse navbar-collapse " id="basicExampleNav">
+
+    <!-- Main menu links  -->
+    <ul *ngFor="let link of model[0]?.app.menu.list " class="navbar-nav mr-auto mobile" >
+      <li class="nav-item ">
+        <a (click)="manageMenu(link.id)"> {{link.name}}</a><span  *ngIf="link.dropdown" class="material-icons">arrow_drop_down</span>
+      </li>
+      
+    </ul>
+    <!-- Main menu Links on the navigation bar -->
+
+    <ul class="navbar-toggler" class="navbar-nav ml-auto">
+      <li class="nav-item" >
+        <div>
+          <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" class="nav-link mycart"
+            href="javascript:;;" (click) ="cartCheckout()">
+            <!-- href="javascript:;;" [routerLink]="['/products/cart-items']"> -->
+            MY CART
+            <span class="mt-2"> ({{productService.navbarCartCount}})</span>&nbsp;
+            <i (click)="showCart=!showCart" class="fa fa-caret-down" aria-hidden="true"></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+
+<div *ngIf="showCart" class="showCart">
+  <!-- Section that details the products selected  -->
+  <div *ngFor="let product of productService.results" class="productRow">
+    <div class="productImage" [style.background-image]="'url('+'assets/img/'+product.image+')'"></div>
+    <div class="productDetails">
+      <div class="productTitleRow">
+          <div class="productTitle"> {{product.title}} <br> x {{product.quantity}} </div> &nbsp;
+       <div (click)="removeProduct(product) " class="material-icons">close</div>
+      </div>
+      <div class="productBrand">{{product.brand}}</div>
+      <div class="productPrice"> ${{product.totalPrice}}.00</div>
+    </div>
+    
+
+  </div>
+<!-- Section which has buttons for cart and checkout  -->
+  <hr *ngIf="productService.products.length>0" style="width:90%"> 
+  <div *ngIf="productService.products.length>0"  class="shoppingDetails">
+    <div class="total">
+      <div class="text">
+        Total
+      </div>
+      <div class="totalCost">
+        ${{productService.total}}.00
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="viewCart">
+        <Button>VIEW CART</Button>
+      </div>
+      <div  class="checkout">
+          <Button [routerLink]="['/products/cart-items']" (click)="showCart=!showCart" >CHECKOUT</Button>
+        </div>
+    </div>
+  </div>
+
+  <div *ngIf="productService.products.length===0">
+    No Products in the cart
+  </div>
+
+</div>
+<!--/.Navbar-->

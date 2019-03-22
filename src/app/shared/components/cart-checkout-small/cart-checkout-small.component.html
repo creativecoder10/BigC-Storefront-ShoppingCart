@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="showCart">
+
+    <div class="productRow">
+
+    </div>
+    <!-- Section that details the products selected  -->
+    <div *ngFor="let product of productService.results" class="productRow">
+      <div class="productImage" [class.full]="full" [style.background-image]="'url('+'assets/img/'+product.image+')'">
+      </div>
+      <div class="productDetails">
+        <div class="productTitleRow">
+          <div class="productTitle"> {{product.title}} <br> x {{product.quantity}} </div>
+          &nbsp;
+          <div (click)="removeProduct(product) " style="font-size:12px; color:gray;position: relative;
+          top: 3px;" class="material-icons">close</div>
+        </div>
+        <div class="productBrand">{{product.brand}}</div>
+        <div class="productPrice"> ${{product.totalPrice}}.00</div>
+      </div>
+
+    </div>
+
+
+    <!-- Section which has buttons for cart and checkout  -->
+    <hr *ngIf="productService.products.length>0" style="width:90%">
+    <div *ngIf="productService.products.length>0" class="shoppingDetails">
+      <div class="total">
+        <div class="text">
+          Total
+        </div>
+        <div class="totalCost">
+          ${{productService.total}}.00
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="viewCart">
+          <Button>VIEW CART</Button>
+        </div>
+        <div class="checkout">
+          <Button [routerLink]="['/products/cart-items']">CHECKOUT</Button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="productService.products.length===0">
+      No Products in the cart
+    </div>
+
+  </div>
+</div>
