@@ -5,7 +5,9 @@
         <div [style.background-image]="'url('+'assets/img/'+product.image+')'" class="image-holder hovereffect">
           
           <div class="overlay">
-              <a class="info" [routerLink]="['/products/product', product.title]" [id]="'details-'+product.title" href="#">VIEW DETAILS </a>
+              <!-- <a class="info" [routerLink]="['/products/product', product.title]"  href="#">VIEW DETAILS </a> -->
+              
+              <a class="info" (click)="gotoProduct('products/product/',product.title)" >VIEW DETAILS </a>
               <a class="info grey-background" [id]="product.title" [name]="product.title" (click)="addToCart(product)" href="#">ADD TO CART</a>
            </div>
         </div>

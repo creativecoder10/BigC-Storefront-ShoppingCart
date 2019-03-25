@@ -49,6 +49,7 @@ export class ProductService {
 	public init() {
 		this.http.get('assets/products.json').subscribe(data => {
 			this.set('records', data);
+
 		});
 
 		
@@ -116,6 +117,7 @@ export class ProductService {
 			return this.http.get('assets/products.json')
 				.toPromise().then(res => {
 					this.my_data = res;
+					this.model=this.my_data.data;
 					return this.my_data;
 				}).catch(this.handleError);
 		} else {
@@ -223,6 +225,7 @@ export class ProductService {
 				}
 			)
 			this.results = result;
+			
 			resolve(this.totalPrice2());
 		});
 	}

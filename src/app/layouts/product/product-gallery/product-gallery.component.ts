@@ -20,7 +20,7 @@ export class ProductGalleryComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
-		this.model=[];
+		this.model = [];
 		this.getAllProducts();
 	}
 
@@ -32,9 +32,7 @@ export class ProductGalleryComponent implements OnInit {
 		const x = this.productService.getResponseData();
 		x.then((data) => {
 			this.model = [];
-			console.log("data",data);
 			let response = data.data;
-			console.log("res",response);
 
 			let props = Object.keys(response);
 			for (let prop of props) {

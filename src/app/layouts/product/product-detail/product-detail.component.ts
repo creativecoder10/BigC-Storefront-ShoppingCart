@@ -38,23 +38,12 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 		// this.spinnerService.show();
 		const x = this.productService.getProductByTitle(title);
 		this.product = x;
+
 		this.quantity = this.product.quantity || 1;
-		console.log("set", this.quantity);
 	}
 
-	/**
-	 * This method will add products to the cart for payment in the later stage
-	 * @param product entire product details object
-	 */
 
-	// addToCart(product: Product) {
-	// 	let a: Product[] = JSON.parse(localStorage.getItem('avct_item')) || [];
-	// 	var product_final = JSON.parse(JSON.stringify(product));
-	// 	console.log("product",product_final.quantity);
-	// 	product_final.quantity = this.quantity;
-	// 	this.productService.addToCart(product_final);
 
-	// }
 
 	addToCart(product: Product) {
 		this.product.quantity = this.quantity;
@@ -68,8 +57,6 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 	}
 
 	quantityChange(event: any) {
-		console.log(event);
-		console.log("qty", this.quantity);
 		if (event === 'add') {
 			this.addQuantity();
 		} else {
@@ -81,7 +68,6 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 	}
 	addQuantity() {
 		this.quantity++;
-		console.log("qa", this.quantity);
 	}
 
 	subtractQuantity() {

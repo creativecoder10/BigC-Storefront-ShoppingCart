@@ -3,6 +3,7 @@ import { fadeAnimation } from "./shared/animations/fadeRoute";
 import { SettingsService } from 'src/app/shared/services/settings.service';
 import { NavbarComponent } from './index/navbar/navbar.component';
 import { ProductService } from 'src/app/shared/services/product.service';
+import { RouterService } from "src/app/shared/services/router.service";
 import { Routes } from "@angular/router";
 declare var $: any;
 
@@ -17,7 +18,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private settings: SettingsService,
-    private products:ProductService
+    private products:ProductService,
+    private routerService: RouterService
   ) {
   
   }
@@ -41,6 +43,7 @@ export class AppComponent implements OnInit {
     });
 
     localStorage.setItem('avct_item',null);
+    this.routerService.navigate(['']);
     this.init();
 
   }
@@ -50,7 +53,7 @@ export class AppComponent implements OnInit {
     this.products.init();
     const x= this.products.getLocalStorage();
    x.then((data)=> {
-    }).catch((error)=> console.log(error));
+    }).catch((error)=> console.log(error, "No products in local storage"));
 
   }
 
