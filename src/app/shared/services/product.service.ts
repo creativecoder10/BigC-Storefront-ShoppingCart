@@ -116,6 +116,7 @@ export class ProductService {
 			return this.http.get('assets/products.json')
 				.toPromise().then(res => {
 					this.my_data = res;
+				        this.model=this.my_data.data;
 					return this.my_data;
 				}).catch(this.handleError);
 		} else {
