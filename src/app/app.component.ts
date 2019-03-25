@@ -18,13 +18,12 @@ export class AppComponent implements OnInit {
 
   constructor(
     private settings: SettingsService,
-    private products:ProductService,
+    private products:ProductService,     
     private routerService: RouterService
   ) {
   
   }
 
-  // Owlcarousel is a touch enabled jQuery plugin for a responsive carousel header
 
 
   ngOnInit() {
@@ -43,7 +42,7 @@ export class AppComponent implements OnInit {
     });
 
     localStorage.setItem('avct_item',null);
-    this.routerService.navigate(['']);
+     this.routerService.navigate(['']);
     this.init();
 
   }

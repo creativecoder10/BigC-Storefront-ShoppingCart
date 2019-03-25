@@ -29,7 +29,7 @@ export class CartCheckoutComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.items=[];
     this.items = this.productService.results;
-    
+ 
   }
 
 /**
