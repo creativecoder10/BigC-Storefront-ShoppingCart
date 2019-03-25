@@ -1,5 +1,5 @@
 <!-- DESKTOP AND SMALL SCREEN / IPAD / TAB VIEW -->
-<div *ngIf="items.length >0" class="container-screen">
+<div *ngIf="items?.length >0" class="container-screen">
 
 	<!-- Table of items purchased  -->
 	<table style="width:90%">
@@ -50,7 +50,7 @@
 
 <!-- MOBILE VIEW SEPARATED ------------------------- -->
 
-<div *ngIf="items.length >0" class="container-mobile">
+<div *ngIf="items?.length >0" class="container-mobile">
 	<div *ngFor="let product of items" class="productContainer">
 		<div class="productImage" [style.background-image]="'url('+'assets/img/'+product.image+')'">
 
